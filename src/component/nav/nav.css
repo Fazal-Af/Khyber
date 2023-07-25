@@ -1,0 +1,193 @@
+nav {
+  width: 100%;
+  height: 12vh;
+  border-bottom: 1px solid var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  align-items: center;
+}
+nav img.imgLogo {
+  width: 5vw;
+  height: 8vh;
+  margin-left: 1rem;
+  border-radius: 0.4rem;
+}
+.search {
+  width: 40%;
+}
+.search input {
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow-two);
+}
+.search input:focus {
+  outline-color: var(--primary-color);
+}
+.navlink {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  text-transform: capitalize;
+}
+.navlink h3 {
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  box-shadow: var(--box-shadow-two);
+}
+.navlink h3:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+nav input {
+  display: inline-block;
+  width: 80%;
+  height: 6vh;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+}
+.burger-main-container {
+  display: none;
+}
+
+/* ========================================Medium Device============== */
+
+@media screen and (max-width: 1024px) {
+  nav {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 10% 60% 20%;
+    justify-content: space-between;
+    position: relative;
+  }
+  nav img.imgLogo {
+    width: 5vw;
+    height: 8vh;
+    margin-left: 1rem;
+    border-radius: 0.4rem;
+  }
+  .search {
+    width: 60%;
+    position: absolute;
+    right: 25%;
+  }
+  .search .btn {
+    height: 4vh;
+  }
+  .search input {
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow-two);
+    height: 4vh;
+  }
+  .navlink {
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
+    position: absolute;
+    right: 1rem;
+  }
+  nav img.imgLogo {
+    width: 5vw;
+    height: 5vh;
+    margin-left: 1rem;
+    border-radius: 0.4rem;
+  }
+}
+
+/* ========================================Small Device============== */
+@media screen and (max-width: 600px) {
+  nav {
+    width: 100vw;
+    height: 8vh;
+  }
+  nav img.imgLogo {
+    display: none;
+  }
+  .search {
+    display: inline-block;
+    position: absolute;
+    width: 85vw;
+    right: 0px;
+  }
+  nav input {
+    display: inline-block;
+    width: 75%;
+    height: 5vh;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .navlink {
+    display: none;
+  }
+
+  .burger-main-container {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+  }
+  .checkbox-container {
+    display: inline-block;
+    position: absolute;
+    width: 10vw;
+    height: 4vh;
+    z-index: 9;
+    opacity: 0;
+    background-color: transparent;
+  }
+  .burger-container {
+    position: absolute;
+    width: 10vw;
+    height: 4vh;
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 0.5rem;
+    top: 1rem;
+    z-index: 3;
+  }
+  .burger-container span {
+    width: 100%;
+    height: 12%;
+    background-color: var(--primary-color);
+  }
+  .main-menu {
+    display: none;
+    position: absolute;
+    padding: 0rem 1rem 1rem 1rem;
+    top: 4rem;
+    width: max-content;
+    transform: translateX(-100%);
+    background-color: var(--main-color);
+    border-bottom-right-radius: 1rem;
+  }
+
+  .checkbox-container:checked ~ .main-menu {
+    display: block;
+    transform: translateX(0%);
+  }
+  .checkbox-container:checked ~ .burger-container .start-child {
+    transform: rotate(43deg);
+    transform-origin: 3%;
+    width: 9.7vw;
+  }
+  .checkbox-container:checked ~ .burger-container .midle-child {
+    display: none;
+  }
+  .checkbox-container:checked ~ .burger-container .end-child {
+    transform: rotate(-43deg);
+    transform-origin: 0%;
+    width: 9.7vw;
+  }
+}
+
+/* ==============================small 380 =========== */
+@media screen and (max-width: 380px) {
+  .search .btn {
+    height: 5vh;
+
+    
+  }
+  nav input {
+    width: 70%;
+  }
+}

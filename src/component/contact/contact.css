@@ -1,0 +1,162 @@
+.contact-container{
+    width: var(--container-lg-two);
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    height: 60%;
+   background-color: var(--secondary-color);
+   padding: 2rem 0rem 1rem 2rem;
+}
+
+form{
+   height: 60vh;
+   width: 80%;
+   margin: auto;
+}
+.contact-section-two,form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact-section-one{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.contact-section-one .btn{
+   position: absolute;
+   bottom: 1rem;
+}
+
+.contact-section-two{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.contact-section-two::after{
+    content: '';
+    position: absolute;
+    width: 63%;
+    height: 60%;
+    left: calc(18.3%);
+    top: calc(19.7%);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-one);
+    z-index: -001;
+}
+
+
+
+/* ========================================Medium Device============== */
+
+@media screen and (max-width:1024px) {
+    .contact-container{
+        width: var(--container-lg-two);
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.06rem;
+    }
+    section{
+        height: 35%;
+        width: var(--container-lg);
+        padding: 1rem;
+    }
+    .contact-section-two::after{
+        content: '';
+        position: absolute;
+        width: var(--container-md);
+        height: var(--container-lg-two);
+        left: calc(19.9%);
+        top: calc(15%);
+        border-radius: 1rem;
+        box-shadow: var(--box-shadow-one);
+        z-index: -001;
+    }
+    .contact-section-one{
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+    }
+    .contact-section-two{
+        border-top-left-radius: 0rem;
+        border-top-right-radius: 0rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+  }
+  
+  
+  /* ========================================Small Device============== */
+  
+  
+  @media screen and (max-width:600px) {
+    section{
+        height: 40%;
+        width: var(--container-sm-two);
+    }
+    .contact-section-one .btn{
+       position: absolute;
+    }
+    .contact-section-two::after{
+        content: '';
+        position: absolute;
+        width: 65%;
+        height: var(--container-sm);
+        left: calc(17.8%);
+        top: calc(10%);
+        border-radius: 1rem;
+        box-shadow: var(--box-shadow-one);
+        z-index: -001;
+    }
+    form{
+        height: 65vh;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        gap: .5rem;
+     }
+  }
+
+  /* ==================================small 380============== */
+
+  @media screen and (max-width:380px) {
+
+    section{
+        height: 45%;
+        width: var(--container-sm-two);
+    }
+    .contact-section-two::after{
+        content: '';
+        position: absolute;
+        width: 65%;
+        height: 90%;
+        left: calc(17.8%);
+        top: calc(5%);
+        border-radius: 1rem;
+        box-shadow: var(--box-shadow-one);
+        z-index: -001;
+    }
+    .contact-section-one h1{
+      font-size: 1.5rem;
+    }
+    .contact-section-one .btn{
+        margin-bottom: 2rem;
+
+    }
+    form{
+       margin:2rem auto;
+     }
+     
+  }

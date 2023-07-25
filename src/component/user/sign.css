@@ -1,0 +1,49 @@
+ .sign-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+ }
+.sign-child-one{
+    width: 30%;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-one);
+    position: relative;
+}
+
+.sign-child-one .btn{
+   position: relative;
+   left: 73%;
+   bottom: .3rem;
+}
+
+.sign-child-one form{
+   margin-top: 1rem;
+}
+
+
+
+/* ========================================Medium Device============== */
+
+
+@media screen and (max-width:1025px) {
+   .sign-child-one{
+      width: var(--container-md);
+  }
+   
+ }
+ 
+ 
+ /* ========================================Small Device============== */
+ 
+ 
+ @media screen and (max-width:600px) {
+   .sign-child-one{
+      width: var(--container-sm);
+  }
+ 
+ }

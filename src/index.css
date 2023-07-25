@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  /* outline: none; */
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: rgba(8, 193, 221, 0.589);
+  --secondary-color: rgba(255, 255, 255, 0.755);
+  --primary-color: rgba(255, 166, 0, 0.813);
+  --white-color: white;
+  --container-lg: 85%;
+  --container-lg-two: 70%;
+  --container-md: 60%;
+  --container-sm: 80%;
+  --container-sm-two: 95%;
+  --box-shadow-one: 0.3rem 0.3rem 0.8rem rgb(50, 48, 48);
+  --box-shadow-two: 0.1rem 0.1rem 0.8rem rgb(136, 133, 133);
+  --transition: all 400ms ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--main-color);
+  overflow-x: hidden;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  transition: var(--transition);
+  max-width: max-content;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  margin: 0.2rem;
+  box-shadow: var(--box-shadow-two);
+}
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--white-color);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+p {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.mainHeading {
+  width: max-content;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--secondary-color);
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+.form-btn{
+  background-color: var(--primary-color);
+}
+
+/* =====================================Medium Device ======================= */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+
+/* =========================================Small Device ======================= */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
